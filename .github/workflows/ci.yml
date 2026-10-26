@@ -1,0 +1,34 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 20
+      - name: Internal link check
+        run: node scripts/check-links.js
+      - name: Outbound link check (warn-only,BOT rows fine)
+        run: node scripts/check-external.js
+      - name: Metadata sanity
+        run: |
+          node --check app.js
+          node --check scripts/serve.js
+          node --check scripts/check-links.js
+          node --check scripts/check-external.js
+      - name: Required files
+        run: |
+          test -f privacy.html
+          test -f terms.html
+          test -f llms.txt
+          test -f robots.txt
+          test -f sitemap.xml
+          test -f .well-known/security.txt
+          test -f samples/placement/report.html ||: ""

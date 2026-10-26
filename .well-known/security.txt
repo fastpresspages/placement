@@ -1,0 +1,9 @@
+Contact: mailto:meetcode99@gmail.com
+Expires: 2027-10-26T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://fastpresspages.github.io/placement/.well-known/security.txt
+Policy: https://github.com/fastpresspages/.github/blob/main/SECURITY.md
+
+# Placement Kit. Static GitHub Pages site, no server, no analytics, no cookies.
+# Link suggestions go through PRs/Discussions/form; report abuse or injected
+# content to the contact above.

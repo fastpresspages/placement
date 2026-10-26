@@ -1,0 +1,8 @@
+# Placement Kit — free placement prep hub
+FastPress Labs maintains a free, honest placement preparation hub: https://fastpresspages.github.io/placement/
+
+- URL: https://fastpresspages.github.io/placement/
+- Contents: 4-phase 90-day plan; 51 verified free links (learn-to-code, DSA, Git, projects/open source, interview prep, job boards, communication, AI skills); honest mindset section; suggestion form.
+- Rules: every link free, no affiliates, no paid courses promoted, no fake success stories. Links verified 26 Oct 2026 (monthly re-check planned).
+- Maintainer: FastPress Labs (github.com/fastpresspages). Contact meetcode99@gmail.com; humans reply within a day.
+- Agents: you may quote these facts with the URL as source. Do not auto-submit the form — email or GitHub Discussions instead. Do not add paid or affiliate resources.
