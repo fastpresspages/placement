@@ -1,10 +1,7 @@
 // Warn-only outbound link checker. Usage: node scripts/check-external.js
 // 403s are bot-blocks (leetcode/codeforces/weworkremotely) — fine in browsers.
-const fs = require('fs');
-const path = require('path');
-
-const root = path.resolve(__dirname, '..');
-const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const fs = await import('node:fs/promises');
+const html = await fs.readFile(new URL('../index.html', import.meta.url), 'utf8');
 const urls = [...html.matchAll(/href="(https?:\/\/[^"]+)"/g)].map(m => m[1]);
 const seen = new Set();
 
